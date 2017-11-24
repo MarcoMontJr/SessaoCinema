@@ -31,7 +31,7 @@ function OcuparPoltronas(id) {
 
 function OcuparPoltronasPreferenciais(id) {
     document.getElementById(id).src = "_Imagens/PoltronaEscolhidaPreferencial.png";
-    document.getElementById(id).name = "PoltronaLivrePreferencial";
+    document.getElementById(id).name = "PoltronaEscolhidaPreferencial";
 }
 
 function CalcularValorTotal() {
@@ -40,7 +40,7 @@ function CalcularValorTotal() {
     var total = 0;
 
     for (var cont in imagens) {
-        if (imagens[cont].name == "PoltronaOcupada" || imagens[cont].name == "PoltronaOcupadaPreferencial") {
+        if (imagens[cont].name == "PoltronaEscolhida" || imagens[cont].name == "PoltronaEscolhidaPreferencial") {
             acumulador += 1;
         }
     }
@@ -56,4 +56,11 @@ function CalcularValorTotal() {
     alert("Preço do Ingresso Unitário: R$5,00\n" +
         "Quantidade de Assentos Escolhidos: " + aux + "\n" +
         "Valor Total: R$" + total.toFixed(2));
+
+    for (var cont in imagens) {
+        if (imagens[cont].name == "PoltronaEscolhida")
+            imagens[cont].src = "_Imagens/PoltronaOcupada.png";
+        else if (imagens[cont].name == "PoltronaEscolhidaPreferencial")
+            imagens[cont].src = "_Imagens/PoltronaOcupadaPreferencial.png"
+    }
 }
