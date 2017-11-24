@@ -25,13 +25,13 @@ function VerificarPoltronas(name, id) {
 }
 
 function OcuparPoltronas(id) {
-    document.getElementById(id).src = "_Imagens/PoltronaOcupada.png ";
-    document.getElementById(id).name = "PoltronaOcupada";
+    document.getElementById(id).src = "_Imagens/PoltronaEscolhida.png ";
+    document.getElementById(id).name = "PoltronaEscolhida";
 }
 
 function OcuparPoltronasPreferenciais(id) {
-    document.getElementById(id).src = "_Imagens/PoltronaOcupadaPreferencial.png";
-    document.getElementById(id).name = "PoltronaOcupadaPreferencial";
+    document.getElementById(id).src = "_Imagens/PoltronaEscolhidaPreferencial.png";
+    document.getElementById(id).name = "PoltronaLivrePreferencial";
 }
 
 function CalcularValorTotal() {
