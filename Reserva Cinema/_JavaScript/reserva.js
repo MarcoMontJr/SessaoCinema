@@ -2,10 +2,10 @@ function LibrerarPoltronas() {
     var imagens = document.getElementsByTagName("img");
 
     for (var cont in imagens) {
-        if (imagens[cont].name == "PoltronaLivre" || imagens[cont].name == "PoltronaOcupada") {
+        if (imagens[cont].name == "PoltronaEscolhida") {
             imagens[cont].src = "_Imagens/PoltronaLivre.png ";
             imagens[cont].name = "PoltronaLivre";
-        } else if (imagens[cont].name == "PoltronaLivrePreferencial" || imagens[cont].name == "PoltronaOcupadaPreferencial") {
+        } else if (imagens[cont].name == "PoltronaEscolhidaPreferencial") {
             imagens[cont].src = "_Imagens/PoltronaLivrePreferencial.png ";
             imagens[cont].name = "PoltronaLivrePreferencial";
         }
@@ -58,9 +58,12 @@ function CalcularValorTotal() {
         "Valor Total: R$" + total.toFixed(2));
 
     for (var cont in imagens) {
-        if (imagens[cont].name == "PoltronaEscolhida")
+        if (imagens[cont].name == "PoltronaEscolhida") {
             imagens[cont].src = "_Imagens/PoltronaOcupada.png";
-        else if (imagens[cont].name == "PoltronaEscolhidaPreferencial")
+            imagens[cont].name = "PoltronaOcupada";
+        } else if (imagens[cont].name == "PoltronaEscolhidaPreferencial") {
             imagens[cont].src = "_Imagens/PoltronaOcupadaPreferencial.png"
+            imagens[cont].name = "PoltronaOcupadaPreferencial";
+        }
     }
 }
