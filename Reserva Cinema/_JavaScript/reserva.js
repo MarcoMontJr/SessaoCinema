@@ -67,3 +67,9 @@ function CalcularValorTotal() {
         }
     }
 }
+
+function Sair() {
+    alert("Obrigado por nos visitar, tenha um bom filme!");
+    var tab = window.open(window.location, "_self");
+    tab.close();
+}
