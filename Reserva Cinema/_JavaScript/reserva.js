@@ -1,3 +1,7 @@
+document.getElementById("Liberar").addEventListener("click", LibrerarPoltronas);
+document.getElementById("Calcular").addEventListener("click", CalcularValorTotal);
+document.getElementById("Sair").addEventListener("click", Sair);
+
 function LibrerarPoltronas() {
     var imagens = document.getElementsByTagName("img");
 
@@ -35,6 +39,7 @@ function OcuparPoltronasPreferenciais(id) {
 }
 
 function CalcularValorTotal() {
+    debugger;
     var imagens = document.getElementsByTagName("img");
     var acumulador = 0;
     var total = 0;
@@ -53,9 +58,10 @@ function CalcularValorTotal() {
 
     total = aux * 5;
 
-    alert("Preço do Ingresso Unitário: R$5,00\n" +
-        "Quantidade de Assentos Escolhidos: " + aux + "\n" +
-        "Valor Total: R$" + total.toFixed(2));
+    if (total > 0)
+        alert("Preço do Ingresso Unitário: R$5,00\n" +
+            "Quantidade de Assentos Escolhidos: " + aux + "\n" +
+            "Valor Total: R$" + total.toFixed(2));
 
     for (var cont in imagens) {
         if (imagens[cont].name == "PoltronaEscolhida") {

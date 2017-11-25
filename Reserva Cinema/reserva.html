@@ -11,9 +11,6 @@
 </head>
 
 <body>
-    <center>
-        <img src="_Imagens/Logo.jpg" class="img-responsive" onclick="OcuparPoltronas();" name="logo" />
-    </center>
     <hr>
     <center>
         <div class="row">
@@ -203,13 +200,13 @@
         <div class="row buttons">
             <div class="col-xs-12">
                 <div class="col-md-4">
-                    <button onclick="LibrerarPoltronas();" class="btn btn-info">Liberar Poltronas</button>
+                    <button id="Liberar" class="btn btn-info">Liberar Poltronas</button>
                 </div>
                 <div class="col-md-4">
-                    <button onclick="CalcularValorTotal();" class="btn btn-success">Finalizar Reserva</button>
+                    <button id="Calcular" onclick="CalcularValorTotal();" class="btn btn-success">Finalizar Reserva</button>
                 </div>
                 <div class="col-md-4">
-                    <button onclick="Sair();" class="btn btn-danger">Sair</button>
+                    <button id="Sair" class="btn btn-danger">Sair</button>
                 </div>
             </div>
         </div>
